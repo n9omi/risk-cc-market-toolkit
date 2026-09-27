@@ -1,6 +1,30 @@
-# Risk Toolkit v1: Market Risk and Counterparty Credit Risk in R
+# Risk Toolkit: Market Risk and Counterparty Credit Risk Case Studies in R
 
-Two end-to-end risk workflows of the kind a bank or trading-house risk team runs every day. Both are built from scratch in R on real public data, with backtesting, validation and regulatory context.
+Two end-to-end case studies that reproduce the daily work of a bank or trading-firm risk team. Each one pulls real market data, cleans it, runs the models, checks them against history, and writes a summary report. Everything is built from scratch in R, with no black-box risk packages, so every number can be traced back to readable code.
+
+**1. Market risk: "How much could this portfolio lose tomorrow, and can we trust that number?"**
+Takes a $10mm multi-asset portfolio (US stocks, Treasuries, gold, crude oil, natural gas, and a short energy-stock hedge) and:
+- estimates next-day **Value-at-Risk (VaR)** and **Expected Shortfall (ES)** six different ways, from simple historical replay to fat-tailed Monte Carlo
+- breaks risk down by position, showing which holdings drive losses and which act as hedges
+- finds the worst 12-month period in history for this portfolio (**stressed VaR**)
+- **backtests** each model against actual daily P&L since 2008, using the tests regulators use (Kupiec, Christoffersen, the Basel traffic light)
+- replays real crises (2008, COVID, negative oil) and hypothetical shocks on today's positions
+- estimates capital under **Basel 2.5** and the newer **FRTB** rules
+
+**2. Counterparty credit risk: "If a trading partner defaults, how much could we lose, and what should that risk cost?"**
+Takes a book of interest-rate swaps, FX forwards and oil swaps with four counterparties, and:
+- simulates 5,000 possible paths for rates, EUR/USD and oil over the next 10 years, and revalues every trade along each path
+- measures **exposure**, meaning how much each counterparty could owe us over time, before and after netting and collateral
+- prices default risk as **CVA** (credit valuation adjustment), including **wrong-way risk**, where a counterparty is most likely to default exactly when it owes us the most
+- calculates regulatory exposure and capital under **SA-CCR**, **IRB** and **BA-CVA**
+- validates the models: pricing checks, martingale tests, Monte Carlo convergence, and backtests of the forecasts against history
+
+**What you get:** each case study writes a report of tables, charts, plain-English findings and regulatory notes, generated from the results so it stays accurate when the data updates. See the PDFs under [Reports](#reports).
+
+**Who it's for:**
+- **Risk and quant hiring managers:** a working demonstration of the core toolkit behind market risk, counterparty risk and xVA roles, including the validation and documentation that model risk teams expect.
+- **Students and career-switchers:** a readable, commented reference implementation of standard methods (Jorion, Hull, Gregory, Basel texts) that you can run and modify through one config file.
+- **Analysts** who want a template for a reproducible risk pipeline: data pull, data-quality checks, models, backtests and an auto-generated report.
 
 ---
 
