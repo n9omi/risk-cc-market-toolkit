@@ -1,0 +1,5 @@
+model,days_tested,exceptions_99,expected_99,exception_rate,kupiec_p,christoffersen_p,cond_coverage_p,es_z2,last250_exc_99,last250_zone,last250_plus_factor,last250_exc_975,frtb_desk_pass,pct_days_red_zone,verdict,es_verdict
+Historical simulation,4610,72,46.1,0.015618221258134491,3.9618151318943085e-4,1.2872556739207397e-5,1.388716021066827e-7,-0.3228468774553541,2,Green,0,4,TRUE,0.05526255445998624,Underestimates risk (too many exceptions),ES acceptable
+Parametric normal,4610,81,46.1,0.0175704989154013,3.063089792365581e-6,7.336835583515722e-10,1.084687895058778e-13,-0.5383348748721761,2,Green,0,5,TRUE,0.13758312313689522,Underestimates risk (too many exceptions),ES acceptable
+EWMA normal,4610,83,46.1,0.018004338394793925,9.090430371783143e-7,0.004236452641407151,9.72810226818055e-8,-0.46818242572873303,3,Green,0,7,TRUE,0.038293969273102496,Underestimates risk (too many exceptions),ES acceptable
+Filtered HS,4610,57,46.1,0.012364425162689804,0.11970155618448708,0.005542252987349894,0.006362585972466195,-0.07064622399370046,2,Green,0,6,TRUE,0,"Right count, but exceptions cluster",ES acceptable

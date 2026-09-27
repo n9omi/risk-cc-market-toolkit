@@ -1,0 +1,11 @@
+parameter,value,source
+Hull-White mean reversion a,0.05,assumption (config)
+Hull-White sigma (abs. rate vol),0.006506348080574415,"1y UST, last 3y"
+EURUSD volatility,0.06725202987728537,last 3y
+WTI mean reversion kappa,1.5742441019906295,"AR(1), last 10y"
+WTI half-life (years),0.4403047657497726,log(2)/kappa
+WTI long-run level ($/bbl),67.96871434918192,exp(alpha)
+WTI volatility,0.5249756308032838,"AR(1), last 10y"
+EUR rate (ECB deposit),0.025,FRED ECBDFR
+EURUSD spot,1.1464,FRED DEXUSEU
+WTI spot ($/bbl),101.44,FRED DCOILWTICO

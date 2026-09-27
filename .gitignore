@@ -1,0 +1,13 @@
+# R session files
+.Rhistory
+.RData
+.Rproj.user/
+
+# Downloaded / intermediate data (re-created by the data-pull scripts)
+*/data/
+
+# OS files
+.DS_Store
+
+# Secrets (API keys live in ~/.Renviron or a local .Renviron, never in git)
+.Renviron
