@@ -1,6 +1,6 @@
 # Risk Analytics in R: Market Risk and Counterparty Credit Risk
 
-Two end-to-end risk workflows of the kind a bank or trading-house risk team runs every day. Both are built from scratch in R on real public data, with backtesting, validation and regulatory context.
+Two end-to-end risk workflows risk teams at banking or trading houses would run. Both are built from scratch in R on real public data, with backtesting, validation, outputted summary reports and regulatory context.
 
 ---
 
